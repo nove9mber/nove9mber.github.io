@@ -1,0 +1,22 @@
+# Sigurnosna zaglavlja za sve odgovore
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+# Datoteke s hashom u nazivu nikad se ne mijenjaju
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Service worker i manifest moraju se uvijek provjeriti na poslužitelju
+/sw.js
+  Cache-Control: no-cache
+
+/manifest.webmanifest
+  Cache-Control: no-cache
+  Content-Type: application/manifest+json
+
+/og/*
+  Cache-Control: public, max-age=86400
